@@ -16,6 +16,7 @@ Script should be executed in a Command Prompt using the following command
 powershell Invoke-Expression -Command (Invoke-RestMethod -Uri aka.osdcloud.com/virtualexpo/corporatedemo)
 This is abbreviated as
 powershell iex(irm aka.osdcloud.com/virtualexpo/corporatedemo)
+https://raw.githubusercontent.com/OSDeploy/virtualexpo/main/corporatedemo.ps1
 #>
 <#
 .SYNOPSIS
@@ -57,7 +58,7 @@ else {
 #  BH WinPE
 #=================================================
 if ($OSDCloudPhase -eq 'WinPE') {
-    Start-OSDCloud -OSVersion 'Windows 10' -OSBuild 21H2 -OSEdition Enterprise -OSLicense Volume -SkipAutopilot -SkipODT -Restart
+    Start-OSDCloud -OSVersion 'Windows 10' -OSBuild 21H2 -OSEdition Enterprise -OSLicense Volume -OSLanguage en-us -SkipAutopilot -SkipODT -Restart
 }
 #=================================================
 #   BH OOBE
